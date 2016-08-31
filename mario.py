@@ -6,5 +6,5 @@ def main(n):
             print('#'*i)
 
 if __name__ == '__main__':
-    no_of_lines = int(input('Enter a number: ').strip())
+    no_of_lines = int(input('Height: ').strip())
     main(no_of_lines)
