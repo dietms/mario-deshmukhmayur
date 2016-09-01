@@ -7,7 +7,7 @@ class Mario {
 
 public:
   void triangle() {
-    if (this->height>1 && this->height<23) {
+    if (this->height>1) {
       for (int i=2; i<(this->height+2); i++) {
         for (int j=0; j<(this->height+1-i); j++) {
           cout << " ";
@@ -20,8 +20,10 @@ public:
     }
   }
   void getHeight() {
-    cout << "Height: ";
-    cin >> this->height;
+    do {
+      cout << "Height: ";
+      cin >> this->height;
+    } while(this->height>1 && this.height<24);
   }
 };
 

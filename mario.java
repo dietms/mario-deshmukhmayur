@@ -4,7 +4,7 @@ import java.util.Scanner;
 class Mario {
   int height;
   void triangle() {
-    if (this.height > 1 && this.height < 23) {
+    if (this.height > 1) {
       for (int i=2; i < (this.height + 2); i++) {
         for (int j=0; j < ((this.height + 1) - i); j++) {
           System.out.print(" ");
@@ -18,8 +18,10 @@ class Mario {
   }
   void getHeight() {
     Scanner user_input = new Scanner(System.in);
-    System.out.print("Height: ");
-    this.height = user_input.nextInt();
+    do {
+      System.out.print("Height: ");
+      this.height = user_input.nextInt();
+    } while(this.height > 1 && this.height < 24);
   }
   public static void main(String... args) {
     Mario m = new Mario();

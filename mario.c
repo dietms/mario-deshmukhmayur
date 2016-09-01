@@ -17,8 +17,10 @@ void triangle(int n)                                                          {
 
 int main()                                                                    {
   int height                                                                  ;
-  printf("Height: ")                                                          ;
-  scanf("%d", &height)                                                        ;
+  do                                                                          {
+    printf("Height: ")                                                        ;
+    scanf("%d", &height)                                                      ;
+  } while(height>1 && height<24)                                              ;
   triangle(height)                                                            ;
   return 0                                                                    ;
                                                                               }
